@@ -23,7 +23,8 @@ int main(int argc, char const *argv[])
 
     if (strcmp(argv[0], "exec_flag") == 0) {
         printf("This is child exec process \n");
-        // privilege dropping on new child process
+        
+        // Drop privilege on new child process
         new_socket = atoi(argv[1]);
 
         // find nobody user ID on this operating system 
@@ -35,7 +36,7 @@ int main(int argc, char const *argv[])
             perror("Dropping the user previlege failed! \n");
             exit(EXIT_FAILURE);
         } else {
-            printf("Dropping the user previlege was successful! \n");
+            printf("Dropping the user privilege was successful! \n");
             valread = read(new_socket, buffer, 1024);
             printf("%s\n",buffer );
             send(new_socket, hello, strlen(hello), 0);
