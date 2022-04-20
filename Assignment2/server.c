@@ -87,7 +87,7 @@ int main(int argc, char const *argv[])
         if (pid < 0) {
             perror("Creating child process using fork(), failed\n");
             exit(EXIT_FAILURE);
-        } else if (pid == 0) { // process client code only in child process
+        } else if (pid == 0) { 
             
             // Create a new process of child
             char address[10];
