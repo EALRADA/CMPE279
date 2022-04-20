@@ -6,6 +6,7 @@
 #include <netinet/in.h>
 #include <string.h>
 #include <pwd.h>
+#include <sys/wait.h>
 #define PORT 80
 
 int main(int argc, char const *argv[])
@@ -27,7 +28,7 @@ int main(int argc, char const *argv[])
 
         // find nobody user ID on this operating system 
         struct passwd *nobodyStruc = getpwnam("nobody");
-        printf("nobody id: %d \n", nobodyStruc->pw_uid);
+        printf("Nobody_ID on this OS is: %d \n", nobodyStruc->pw_uid);
 
         //dropping previleges
         if (setuid(nobodyStruc->pw_uid) == -1) {
