@@ -31,7 +31,7 @@ int main(int argc, char const *argv[])
         struct passwd *nobodyStruc = getpwnam("nobody");
         printf("Nobody_ID on this OS is: %d \n", nobodyStruc->pw_uid);
 
-        //dropping previleges
+        //Drop privilege
         if (setuid(nobodyStruc->pw_uid) == -1) {
             perror("Dropping the user previlege failed! \n");
             exit(EXIT_FAILURE);
