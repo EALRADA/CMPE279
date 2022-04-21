@@ -1,4 +1,7 @@
 # CMPE279
+
+##Ealrada Piroyan
+
 ## Assignment 1:
 extend the server code to use privilege separation. You should accomplish this by
 splitting up the code into two logical parts – the part that sets up the socket and a separate part that
