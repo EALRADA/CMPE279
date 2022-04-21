@@ -1,6 +1,6 @@
 # CMPE279
 
-##Ealrada Piroyan
+## Ealrada Piroyan
 
 ## Assignment 1:
 extend the server code to use privilege separation. You should accomplish this by
